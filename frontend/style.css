@@ -1,0 +1,62 @@
+/* Set up the layout and appearance of the extension */
+:root {
+  --myblue :#0095ff;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  height: 100px; 
+  width: 200px;
+  margin-top: 50px;
+  /*background-color: #ffffff;*/
+  border-radius: 30%; /* Rounded corners for the window */
+}
+
+/* Style for the round buttons */
+.button-container {
+  display: flex;
+  border-radius: 30%; /* Rounded corners for the window */
+  background-color: #ffffff;
+  justify-content: center;
+  justify-self: center;
+}
+
+
+.button {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  padding: 0px;
+  border: none;
+  border-radius: 50%;
+  background-color: var(--myblue); /* color of button */
+  color: white; /* White text color */
+  margin-top: -20px;
+  margin-bottom: 30px;
+  margin-left: 20px;
+  margin-right: 20px;
+  cursor: pointer;
+  transition-duration: 0.4s;
+  font-size: large;
+  font-family: "Arial", sans-serif; /* Specify a font that supports the required Unicode characters */
+}
+
+.download-icon::before {
+  font-family: "Arial", sans-serif; /* Specify a font that supports the required Unicode characters */
+}
+
+.play-icon::before {
+  font-family: "Arial", sans-serif; /* Specify a font that supports the required Unicode characters */
+}
+
+ /* invert button when hovering*/
+.button:hover {
+  background-color: white; 
+  color: var(--myblue); 
+  border: solid;
+  border-width: 1px;
+  border-color: var(--myblue);
+}

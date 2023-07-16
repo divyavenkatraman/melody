@@ -18,6 +18,12 @@
       "128": "icons/logo.png"
     }
   },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["script.js"]
+    }
+  ],
   "permissions": [
     "storage",
     "activeTab",
@@ -27,16 +33,13 @@
     "declarativeNetRequestWithHostAccess"
   ],
   "host_permissions": [
-    "http://*/*",
+    "https://use.fontawesome.com/",
     "https://*/*"
   ],
-  "action_handlers": [
-    {
-      "default_popup": {
-        "consumer": "popup"
-      }
-    }
-  ],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'",
+    "sandbox": "sandbox allow-scripts allow-forms"
+  },
   "web_accessible_resources": [
     {
       "resources": [
