@@ -1,6 +1,5 @@
 function sendMessageToBackground() {
   chrome.runtime.sendMessage({ action: 'executeScript' });
-  console.log("message sent to background")
 }
 
 // Add a click event listener to the button

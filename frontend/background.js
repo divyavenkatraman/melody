@@ -2,19 +2,21 @@
 The background script will then execute the Python script using the chrome.scripting.executeScript method.*/
 
 // Function to execute the Python script
-function executePythonScript() {
-  chrome.scripting.executeScript({
-    target: { tabId: sender.tab.id },
-    files: ['play.py'],
-    function: handlePythonScriptOutput
-  });
-  console.log("background script working")
+function executePythonScript(sender) {
+  if (sender && sender.tab && sender.tab.id) {
+    // Replace 'pythonScript.py' with the actual file path of your Python script
+    chrome.scripting.executeScript({
+      target: { tabId: sender.tab.id },
+      files: ['pythonScript.py'],
+      function: handlePythonScriptOutput
+    });
+  }
 }
 
 // Listen for messages from the content script
 chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
   if (request.action === 'executeScript') {
-    executePythonScript();
+    executePythonScript(sender);
   }
 });
 
