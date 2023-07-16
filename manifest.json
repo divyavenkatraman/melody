@@ -1,0 +1,51 @@
+{
+  "manifest_version": 3,
+  "name": "Audio Player & Downloader",
+  "version": "1.0",
+  "description": "A simple audio player and downloader extension.",
+  "icons": {
+    "48": "icons/logo.png",
+    "128": "icons/logo.png"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "index.html",
+    "default_icon": {
+      "16": "icons/logo.png",
+      "48": "icons/logo.png",
+      "128": "icons/logo.png"
+    }
+  },
+  "permissions": [
+    "storage",
+    "activeTab",
+    "scripting",
+    "declarativeContent",
+    "declarativeNetRequest",  
+    "declarativeNetRequestWithHostAccess"
+  ],
+  "host_permissions": [
+    "http://*/*",
+    "https://*/*"
+  ],
+  "action_handlers": [
+    {
+      "default_popup": {
+        "consumer": "popup"
+      }
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "options.js"
+      ],
+      "matches": [
+        "https://*/*",
+        "http://*/*"
+      ]
+    }
+  ]
+}

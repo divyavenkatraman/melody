@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Melody - Options</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 400px;
+      margin: 0 auto;
+    }
+    h1 {
+      text-align: center;
+    }
+    form {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 1em;
+    }
+    input {
+      flex: 1;
+      margin-right: 0.5em;
+    }
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    li {
+      background-color: #f0f0f0;
+      padding: 0.5em;
+      margin-bottom: 0.5em;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    button {
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>Options</h1>
+  <p>Customize your categories here</p>
+
+  <form>
+    <input type="text" id="category-input" placeholder="New category">
+    <button id="add-category-button">Add Category</button>
+  </form>
+  <ul id="category-list"></ul>
+  <script src="options.js"></script>
+</body>
+</html>

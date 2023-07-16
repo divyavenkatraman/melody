@@ -1,0 +1,41 @@
+body {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 1em;
+}
+
+form {
+  margin-bottom: 1em;
+}
+
+input, select {
+display: block;
+width: 100%;
+margin-bottom: 0.5em;
+}
+
+button {
+cursor: pointer;
+}
+
+#bookmarks-container {
+display: grid;
+grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+grid-gap: 1em;
+}
+
+.bookmark {
+background-color: #c21e1e;
+padding: 1em;
+border-radius: 4px;
+}
+
+.bookmark h3 {
+margin: 0;
+margin-bottom: 0.5em;
+}
+
+.bookmark a {
+display: block;
+word-break: break-word;
+}

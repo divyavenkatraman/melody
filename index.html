@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Extension with Buttons</title>
+  <style>
+    /* CSS styles for the extension */
+
+    /* Set up the layout and appearance of the extension */
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #d1c8c8;
+      border-radius: 2%; /* Rounded corners for the window */
+    }
+
+    /* Style for the round buttons */
+    .button-container {
+      display: flex;
+    }
+
+    .button {
+      display: inline-block;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background-color: #4c91af; /* Green background color */
+      color: white; /* White text color */
+      font-size: 24px;
+      cursor: pointer;
+      margin-right: 16px; /* Add spacing between the buttons */
+    }
+
+    /* Create a play icon using CSS pseudo-elements */
+    .play-icon::before {
+      content: '\25B6'; /* Unicode for play symbol */
+    }
+
+    /* Create a download icon using CSS pseudo-elements */
+    .download-icon::before {
+      content: '\2193'; /* Unicode for downward arrow symbol */
+    }
+  </style>
+</head>
+<body>
+  <!-- Container for the buttons -->
+  <div class="button-container">
+    <!-- The play button -->
+    <button class="button play-icon"></button>
+
+    <!-- The download button -->
+    <button class="button download-icon"></button>
+  </div>
+</body>
+</html>
